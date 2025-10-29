@@ -29,6 +29,7 @@ pipeline {
                     }
                     steps {
                         // Unit tests with Vitest
+                        sh 'npm install --save-dev vitest'
                         sh 'npx vitest run --reporter=verbose'                        
                     }
                 }                
