@@ -41,9 +41,9 @@ pipeline {
                         }
                     }
                     steps {
-                        sh 'npm ci'
-                        sh 'npx playwright install --with-deps'
-                        sh 'npx playeright test'
+                        // sh 'npm ci'
+                        // sh 'npx playwright install --with-deps'
+                        sh 'npx playwright test'
                         // Integration tests with Playwright
                         // sh 'npx playwright install --with-deps'
                         // sh 'npx playwright test --reporter=list'                        
