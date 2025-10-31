@@ -45,7 +45,7 @@ pipeline {
                     steps {
                         // sh 'npm ci'
                         // sh 'npx playwright install --with-deps'
-                        System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-same-origin allow-scripts; default-src 'none'; img-src 'self'; style-src 'self';")
+                        // System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-same-origin allow-scripts; default-src 'none'; img-src 'self'; style-src 'self';")
                         sh 'npx playwright test'
                         // Integration tests with Playwright
                         // sh 'npx playwright install --with-deps'
@@ -79,7 +79,7 @@ pipeline {
             }
             steps {                
                 // System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-same-origin; default-src 'none'; img-src 'self'; style-src 'self';")
-                System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-same-origin allow-scripts; default-src 'none'; img-src 'self'; style-src 'self';")
+                // System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-same-origin allow-scripts; default-src 'none'; img-src 'self'; style-src 'self';")
                 sh 'npx playwright test'
             }
             post {
